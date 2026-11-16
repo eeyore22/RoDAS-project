@@ -14,6 +14,8 @@ The content follows the supplied working manuscript (`paper.zip`): the annotatio
 
 `static/images/q2_label_stability.svg` is the supplied manuscript's plot, copied unchanged. It contains aggregate results and no camera imagery. The three result groups are not disjoint: stable with an observed neighbor is a subset of stable.
 
+The opening figure comes from `figs/teaser_1031.pdf` in the supplied `paper.zip`; the ZIP contains no `figs/teaser_1030.pdf`. The figure beside “From Robot Logs to Supervision” comes from `figs/data_overview.pdf`. Both are rendered locally to lossless WebP at 2600 pixels wide, with links to the full-resolution images. Existing opaque face masks in the teaser are preserved. Faces in the data overview's three embedded camera observations are locally blurred. The separate “Evidence-Linked Annotation” section has been removed. Source and derivative hashes are recorded in `static/images/paper_figures/manifest.json`; source PDFs and original renders are not included in this website repository.
+
 The local assembly helper is `../analysis_outputs/rodas_project_setup_20261111/build_lisn_page.py`. It reads `paper_content.json` and the private workspace's selected-case records to regenerate the page; it is not needed to serve this repository. In the research workspace, `../analysis_outputs/paper_sync_20261116/sync_content.py` prepares manuscript text and the two research READMEs. Run the content helper before the assembly helper when refreshing from the supplied manuscript. The local reconciliation report records unresolved manuscript inconsistencies, including human-reliability results that were not added to the page.
 
 ## Local preview
@@ -22,11 +24,11 @@ Serve the research workspace root and open:
 
 `http://localhost:8000/RoDAS-project/index.html`
 
-All 68 camera observations, including every timeline slot, now use face-blurred derivatives contained in `static/images/face_blurred/`. No original camera files are included or linked from the page. The user explicitly authorized local OpenCV/Pillow processing; no image-generation service was used. Gaussian blur is restricted to manually reviewed face/head ellipses. Lossless WebP storage preserves every decoded pixel outside those masks. The original files remain unchanged, and per-frame regions, hashes, and checks are recorded locally under `../analysis_outputs/rodas_face_blur_20261111/`. This is face blurring, not a claim that all other identifying scene details have been removed. No footage has been uploaded.
+All 68 observation-timeline frames use face-blurred derivatives contained in `static/images/face_blurred/`. No original camera files are included or linked from the page. The user explicitly authorized local OpenCV/Pillow processing; no image-generation service was used. Gaussian blur is restricted to manually reviewed face/head ellipses. Lossless WebP storage preserves every decoded pixel outside those masks. The original files remain unchanged, and per-frame regions, hashes, and checks are recorded locally under `../analysis_outputs/rodas_face_blur_20261111/`. Paper-figure conversion and additional face regions are recorded under `../analysis_outputs/rodas_paper_figures_20261116/`. This is face blurring, not a claim that all other identifying scene details have been removed.
 
 The site assets are self-contained, but the page remains an unpublished draft for review. All text and initial figures work without JavaScript; JavaScript adds the carousel, observation timeline, and citation copy action.
 
-The proposed teaser video is not yet produced. The opening figure currently uses the selected A01 keyframe. The observation timeline distinguishes past/keyframe model inputs from future annotation context; annotations stay fixed at t = 0.
+The opening figure uses the supplied paper teaser. The observation timeline distinguishes past/keyframe model inputs from future annotation context; annotations stay fixed at t = 0.
 
 ## Publication
 

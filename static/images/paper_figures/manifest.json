@@ -1,0 +1,34 @@
+{
+  "source_archive_sha256": "40b5fcbd35d32f32f2beade44a81a4d51e013efcc5fbda76d966d41fe22ed126",
+  "requested_teaser": "figs/teaser_1030.pdf",
+  "external_upload": false,
+  "generative_editing": false,
+  "entries": [
+    {
+      "source_pdf": "figs/teaser_1031.pdf",
+      "source_pdf_sha256": "91c8f67143c50e7d845ba339918b0c335881eccfb17c10ed98f0fd882d1cf168",
+      "output": "static/images/paper_figures/teaser.webp",
+      "output_sha256": "e28a6c320ec60bcb769383d13df9c507aecfffa633b5b04dbdfbc644793351ab",
+      "size": [
+        2600,
+        1114
+      ],
+      "privacy_treatment": "Existing opaque face masks in the supplied teaser are retained unchanged.",
+      "outside_face_mask_pixels_unchanged": true,
+      "lossless_webp_verified": true
+    },
+    {
+      "source_pdf": "figs/data_overview.pdf",
+      "source_pdf_sha256": "1f7bf6e3509b8eb640922310ebc890f96cdd6dfa9cd5090243e2180d9cf6c67c",
+      "output": "static/images/paper_figures/data_overview.webp",
+      "output_sha256": "264c7a29d731dce932b9e3fb3597889ecf24237f6ba5a71e633c187657b38fb6",
+      "size": [
+        2600,
+        1248
+      ],
+      "privacy_treatment": "Local Gaussian face/head blur in all three embedded observations.",
+      "outside_face_mask_pixels_unchanged": true,
+      "lossless_webp_verified": true
+    }
+  ]
+}

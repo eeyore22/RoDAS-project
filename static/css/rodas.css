@@ -6,6 +6,7 @@
 .unavailable { opacity: .5; cursor: default; pointer-events: none; }
 .teaser-image { margin-bottom: 1.5rem; }
 .teaser-image img { display: block; width: 100%; height: auto; }
+.paper-figure-link { display: block; cursor: zoom-in; }
 .schema-figure img, .method-figure img { display: block; width: 100%; height: auto; }
 figcaption:not(.subtitle), .figure-note, .fixed-record { font-size: .875rem; color: var(--text-secondary); line-height: 1.6; }
 .schema-figure figcaption, .method-figure figcaption { text-align: center; margin-top: .8rem; }

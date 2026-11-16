@@ -24,9 +24,9 @@
 </div></div></div></div></section>
 
 <section class="hero teaser" id="teaser"><div class="container is-max-desktop"><div class="hero-body">
-  <figure class="teaser-image"><img src="static/images/face_blurred/A01/frame_04.webp" alt="A crosswalk with pedestrians, a scooter rider, and vehicles around the robot’s intended path." width="1280" height="720" loading="lazy"></figure>
+  <figure class="teaser-image"><a class="paper-figure-link" href="static/images/paper_figures/teaser.webp" target="_blank" rel="noopener" aria-label="Open the teaser figure at full resolution"><img src="static/images/paper_figures/teaser.webp" alt="RoDAS paper teaser: a recorded sidewalk and crosswalk route, aligned route, signal, camera, and odometry streams, and a keyframe record linking critical components, decision, and CoC explanation." width="2600" height="1114" fetchpriority="high"></a></figure>
   <h2 class="subtitle has-text-centered">A green signal permits crossing. A pedestrian still occupies the path.<br>RoDAS records the conditions behind the robot’s decision.</h2>
-  <p class="figure-note has-text-centered">Faces are blurred for privacy. Annotations refer to the original observations.</p>
+  <p class="figure-note has-text-centered">Faces are obscured for privacy. Click the figure to enlarge.</p>
 </div></div></section>
 
 <section class="section hero is-light" id="abstract"><div class="container is-max-desktop"><div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
@@ -40,13 +40,8 @@
 </div></div></div></section>
 
 <section class="section hero is-light" id="data"><div class="container is-max-desktop"><div class="columns is-vcentered is-centered">
-  <div class="column is-half"><h2 class="title is-3">From Robot Logs to Supervision</h2><div class="content has-text-justified"><p>The same stop or slowdown can reflect a red signal, an occupied path, or yielding to a pedestrian. Observed motion alone leaves these conditions implicit.</p><p>RoDAS (Robot Decision Annotation Schema) links critical scene components, a four-axis action, an explicit decision basis, and a component-referenced Chain-of-Causation (CoC) explanation. Permission and corridor clearance are recorded separately, alongside the components and conditions governing the decision.</p></div></div>
-  <div class="column is-half"><figure class="schema-figure"><img src="static/images/evidence_schema.svg" width="600" height="530" alt="Four aligned evidence sources produce critical components, a four-axis decision, an explicit decision basis, and a CoC explanation."><figcaption>Four aligned sources; one evidence-linked keyframe record.</figcaption></figure></div>
-</div></div></section>
-
-<section class="section" id="method"><div class="container is-max-desktop"><div class="columns is-vcentered is-centered">
-  <div class="column is-half"><figure class="method-figure"><img src="static/images/annotation_pipeline.svg" width="1120" height="300" alt="Perception, Decision, image-free Auditor, and Narrator stages with targeted revision."><figcaption>Intermediate records support inspection and targeted revision.</figcaption></figure></div>
-  <div class="column is-half"><h2 class="title is-3">Evidence-Linked Annotation</h2><div class="content has-text-justified"><p>Perception identifies critical components from past and current observations. Decision assigns four-axis labels and their governing conditions. The image-free Auditor checks consistency and can request targeted revisions. Narrator writes a component-linked CoC from the approved record.</p><p>Only the Decision stage may inspect future images to corroborate the action. Conditions used to justify it must be observable by t = 0. Annotation context contains 17 slots over [−2, +6] seconds; the predictor receives only five slots over [−2, 0] seconds.</p></div></div>
+  <div class="column is-one-third-desktop"><h2 class="title is-3">From Robot Logs to Supervision</h2><div class="content has-text-justified"><p>The same stop or slowdown can reflect a red signal, an occupied path, or yielding to a pedestrian. Observed motion alone leaves these conditions implicit.</p><p>RoDAS (Robot Decision Annotation Schema) links critical scene components, a four-axis action, an explicit decision basis, and a component-referenced Chain-of-Causation (CoC) explanation. Permission and corridor clearance are recorded separately, alongside the components and conditions governing the decision.</p></div></div>
+  <div class="column is-two-thirds-desktop"><figure class="schema-figure data-overview-figure"><a class="paper-figure-link" href="static/images/paper_figures/data_overview.webp" target="_blank" rel="noopener" aria-label="Open the data overview figure at full resolution"><img src="static/images/paper_figures/data_overview.webp" width="2600" height="1248" loading="lazy" alt="RoDAS paper data overview: robot-log collection and keyframe selection; preprocessing, Perception, Decision, Auditor, and Narrator stages; and an annotated keyframe with decision labels, critical components, CoC, and regenerated CoT."></a><figcaption>Data collection, annotation pipeline, and a labeled keyframe. Click the figure to enlarge.</figcaption></figure></div>
 </div></div></section>
 
 <section class="section hero is-light" id="corpus"><div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
