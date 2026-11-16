@@ -1,0 +1,226 @@
+{
+  "title": "RoDAS: Evidence-Linked Decision Annotations for Sidewalk Robot Navigation",
+  "name_expansion": "Robot Decision Annotation Schema",
+  "abstract": "Outdoor mobile robots must interpret traffic rules and implicit social conventions when deciding whether to proceed, slow down, or yield. We introduce RoDAS (Robot Decision Annotation Schema) and a pipeline that uses vision-language models (VLMs) to generate evidence-linked annotations from raw sidewalk and crosswalk robot logs. The schema links critical scene components, explicit decision conditions, four-axis actions, and component-referenced Chain-of-Causation (CoC) explanations. The pipeline aligns route instructions, traffic-light information, front-camera observations, and wheel odometry, then generates and checks annotations in stages. We apply it to 74,359 keyframes and compare decision-only training with explanations learned as auxiliary targets or generated before decisions across five VLM backbones. On Cosmos-Reason2-8B, decision-only fine-tuning raises three-axis exact match from 39.55% to 69.04% on held-out places. Auxiliary supervision provides no established gain over decision-only training on this backbone. Replacing training explanations with those from other scenes with different decision conditions, while retaining action labels, leaves auxiliary-model accuracy nearly unchanged after retraining despite reduced agreement between generated explanations and recorded evidence. The linked records reveal errors near recorded label changes and subtle temporal, spatial, and motion-magnitude distinctions in action labels. For decision-only models of the same backbone, three-seed mean exact match is 50.6% near label changes versus 76.1% in stable regions. RoDAS supports the study of explanation–decision consistency and the diagnosis of both prediction failures and ambiguous action annotations.",
+  "contributions": [
+    [
+      "Evidence-linked annotation",
+      "A staged VLM pipeline aligns multimodal robot logs and records scene components, four-axis decisions, their governing conditions, and component-linked explanations."
+    ],
+    [
+      "Learning robot decisions",
+      "Fine-tuning improves decision and component prediction. Decision-only, inline, and auxiliary supervision are compared across five VLM backbones."
+    ],
+    [
+      "Diagnosing prediction errors",
+      "Linked records expose errors near observed label changes, under different decision conditions, and on uncommon actions, while separating decision correctness from explanation agreement."
+    ]
+  ],
+  "corpus": [
+    [
+      "Recorded runs / routes / days",
+      "115 / 19 / 13"
+    ],
+    [
+      "Duration / travel distance",
+      "12.7 hours / 46.2 km"
+    ],
+    [
+      "Keyframes after preprocessing",
+      "74,359"
+    ],
+    [
+      "Annotation context",
+      "17 slots; [−2, +6] s at 2 Hz"
+    ],
+    [
+      "Model observations",
+      "5 slots; [−2, 0] s"
+    ],
+    [
+      "Main test set",
+      "6,592 frames; 9 unseen places"
+    ],
+    [
+      "Uncertainty clusters",
+      "60 place × run groups"
+    ]
+  ],
+  "decision_axes": [
+    [
+      "Process (5)",
+      "Navigate sidewalk; approach crosswalk; wait for next green; wait for a safe gap; navigate crosswalk."
+    ],
+    [
+      "Longitudinal (4)",
+      "Maintain speed; accelerate; decelerate; stop for constraint."
+    ],
+    [
+      "Lateral (4)",
+      "Keep path; nudge left; nudge right; adjust heading."
+    ],
+    [
+      "Etiquette (6)",
+      "None; keep pedestrian distance; give way to oncoming pedestrian; let pedestrian pass; stay behind pedestrian; wait in queue."
+    ]
+  ],
+  "decision_results": [
+    {
+      "condition": "Zero-shot",
+      "EM3": 39.55,
+      "Joint": 29.72
+    },
+    {
+      "condition": "No-Reason",
+      "EM3": 69.04,
+      "Joint": 60.15
+    },
+    {
+      "condition": "Inline-CoT",
+      "EM3": 57.87,
+      "Joint": 49.52
+    },
+    {
+      "condition": "Inline-CoC",
+      "EM3": 63.81,
+      "Joint": 54.46
+    },
+    {
+      "condition": "Aux-CoC",
+      "EM3": 69.83,
+      "Joint": 61.51
+    }
+  ],
+  "backbone_results": [
+    {
+      "backbone": "Cosmos 2B",
+      "No-Reason": [
+        65.88,
+        57.42
+      ],
+      "Inline-CoC": [
+        61.7,
+        51.84
+      ],
+      "Aux-CoC": [
+        68.97,
+        60.15
+      ],
+      "aux_minus_inline_pp": 7.27
+    },
+    {
+      "backbone": "Cosmos 8B",
+      "No-Reason": [
+        69.04,
+        60.15
+      ],
+      "Inline-CoC": [
+        63.81,
+        54.46
+      ],
+      "Aux-CoC": [
+        69.83,
+        61.51
+      ],
+      "aux_minus_inline_pp": 6.02
+    },
+    {
+      "backbone": "Cosmos 32B",
+      "No-Reason": [
+        69.81,
+        60.78
+      ],
+      "Inline-CoC": [
+        63.53,
+        54.16
+      ],
+      "Aux-CoC": [
+        70.65,
+        61.97
+      ],
+      "aux_minus_inline_pp": 7.12
+    },
+    {
+      "backbone": "Qwen2.5-VL 7B",
+      "No-Reason": [
+        69.08,
+        60.02
+      ],
+      "Inline-CoC": [
+        63.46,
+        53.26
+      ],
+      "Aux-CoC": [
+        68.03,
+        59.39
+      ],
+      "aux_minus_inline_pp": 4.57
+    },
+    {
+      "backbone": "Qwen3-VL 8B",
+      "No-Reason": [
+        67.91,
+        59.25
+      ],
+      "Inline-CoC": [
+        63.52,
+        53.94
+      ],
+      "Aux-CoC": [
+        70.31,
+        61.27
+      ],
+      "aux_minus_inline_pp": 6.79
+    }
+  ],
+  "explanation_intervention": [
+    {
+      "training_explanations": "Original CoC",
+      "EM3": 69.83,
+      "G": 69.8
+    },
+    {
+      "training_explanations": "CoC from other scenes",
+      "EM3": 69.82,
+      "G": 5.22
+    }
+  ],
+  "stability_results": [
+    {
+      "condition": "No-Reason",
+      "stable": 76.14,
+      "stable_with_neighbor": 70.54,
+      "boundary": 50.61
+    },
+    {
+      "condition": "Inline-CoC",
+      "stable": 71.5,
+      "stable_with_neighbor": 66.87,
+      "boundary": 43.84
+    },
+    {
+      "condition": "Aux-CoC",
+      "stable": 77.06,
+      "stable_with_neighbor": 72.74,
+      "boundary": 51.06
+    }
+  ],
+  "stability_counts": {
+    "stable": 4759,
+    "stable_with_neighbor": 1960,
+    "boundary": 1833
+  },
+  "source_sections": [
+    "main.tex",
+    "sec/0_abstract.tex",
+    "sec/1_intro.tex",
+    "sec/3_data_pipeline.tex",
+    "sec/3b_dataset_profile.tex",
+    "sec/4_experiment.tex",
+    "sec/5_results.tex",
+    "sec/6_conclusion.tex",
+    "tables/backbone_results.tex",
+    "tables/q2_stability_results.tex",
+    "sec/S_supplementary.tex"
+  ]
+}

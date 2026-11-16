@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="530" viewBox="0 0 600 530" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence-linked keyframe supervision</title>
+  <desc id="desc">Route instructions, traffic-light detections, camera observations, and odometry are aligned to a keyframe. The record includes critical components, four-axis decision, explicit decision basis, and component-linked CoC explanation.</desc>
+  <rect width="600" height="530" fill="#fff"/>
+  <g font-family="Inter,Arial,sans-serif" fill="#1e293b">
+    <text x="300" y="37" text-anchor="middle" font-size="18" font-weight="600">Aligned observations at a keyframe</text>
+    <g fill="#f8fafc" stroke="#cbd5e1"><rect x="25" y="65" width="265" height="79" rx="6"/><rect x="310" y="65" width="265" height="79" rx="6"/><rect x="25" y="160" width="265" height="79" rx="6"/><rect x="310" y="160" width="265" height="79" rx="6"/></g>
+    <g font-size="16" font-weight="600"><text x="43" y="94">Route instruction</text><text x="328" y="94">Traffic-light detections</text><text x="43" y="189">Camera observations</text><text x="328" y="189">Odometry</text></g>
+    <g font-size="14" fill="#64748b"><text x="43" y="121">Navigation intent</text><text x="328" y="121">Signal / permission evidence</text><text x="43" y="216">Clearance and interaction</text><text x="328" y="216">Observed motion</text></g>
+    <path d="M300 252v37m-7-8 7 8 7-8" fill="none" stroke="#64748b" stroke-width="2"/>
+    <rect x="25" y="305" width="550" height="198" rx="6" fill="#fff" stroke="#94a3b8"/>
+    <text x="45" y="336" font-size="17" font-weight="600">Evidence-linked supervision</text>
+    <g font-size="15"><text x="45" y="373">Critical components</text><text x="45" y="409">Four-axis decision</text><text x="45" y="445">Explicit decision basis</text><text x="45" y="481">CoC explanation</text></g>
+    <g font-size="14" fill="#64748b"><text x="280" y="373">Scene entities and relations</text><text x="280" y="409">Process / longitudinal / lateral / etiquette</text><text x="280" y="445">Permission / clearance / component roles</text><text x="280" y="481">Explanation linked to component IDs</text></g>
+  </g>
+</svg>

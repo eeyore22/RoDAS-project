@@ -1,0 +1,26 @@
+{
+  "reference": "https://social-nav.github.io/LISN-project/",
+  "upstream_template": "https://github.com/eliahuhorwitz/Academic-project-page-template",
+  "files": [
+    {
+      "path": "static/css/bulma.min.css",
+      "source_url": "https://raw.githubusercontent.com/Social-Nav/LISN-project/master/static/css/bulma.min.css",
+      "sha256": "58b28659220961ead137cb5b346b5759562750ce703094d70fc786e0db467033"
+    },
+    {
+      "path": "static/css/index.css",
+      "source_url": "https://raw.githubusercontent.com/Social-Nav/LISN-project/master/static/css/index.css",
+      "sha256": "2840bed03588f74948e6ee849587af5cbda9246c9db415756b41b69cd26191cf"
+    },
+    {
+      "path": "static/css/bulma-carousel.min.css",
+      "source_url": "https://raw.githubusercontent.com/Social-Nav/LISN-project/master/static/css/bulma-carousel.min.css",
+      "sha256": "9d586b0d953f9dedc8ff3e8b5d611bc943849afefdb0f18a11bb0fed258b9072"
+    },
+    {
+      "path": "static/js/bulma-carousel.min.js",
+      "source_url": "https://raw.githubusercontent.com/Social-Nav/LISN-project/master/static/js/bulma-carousel.min.js",
+      "sha256": "a8a47bef2cd50640d82aea128360690086ccb6617c6858ee4c71559c88e4a732"
+    }
+  ]
+}

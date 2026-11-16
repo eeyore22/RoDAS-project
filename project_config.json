@@ -1,0 +1,82 @@
+{
+  "project_name": "RoDAS",
+  "github": {
+    "owner_type": "personal",
+    "owner": "eeyore22",
+    "code_repository": "RoDAS",
+    "page_repository": "RoDAS-project"
+  },
+  "title": "RoDAS: Evidence-Linked Decision Annotations for Sidewalk Robot Navigation",
+  "authors": [
+    {
+      "name": "Juneyoung Ro",
+      "equal_contribution": true,
+      "corresponding": false,
+      "affiliation_ids": [
+        "1"
+      ],
+      "internship": true
+    },
+    {
+      "name": "Sungwoo Koo",
+      "equal_contribution": true,
+      "corresponding": false,
+      "affiliation_ids": [
+        "2"
+      ]
+    },
+    {
+      "name": "Kisung Kim",
+      "equal_contribution": false,
+      "corresponding": false,
+      "affiliation_ids": [
+        "2"
+      ]
+    },
+    {
+      "name": "Jiwon Lee",
+      "equal_contribution": false,
+      "corresponding": false,
+      "affiliation_ids": [
+        "2"
+      ]
+    },
+    {
+      "name": "Hansol Yi",
+      "equal_contribution": false,
+      "corresponding": false,
+      "affiliation_ids": [
+        "2"
+      ]
+    },
+    {
+      "name": "Jinhan Lee",
+      "equal_contribution": false,
+      "corresponding": true,
+      "affiliation_ids": [
+        "2"
+      ]
+    }
+  ],
+  "affiliation": "KIA; Naver Labs",
+  "affiliations": [
+    {
+      "id": "1",
+      "name": "KIA"
+    },
+    {
+      "id": "2",
+      "name": "Naver Labs"
+    }
+  ],
+  "internship_note": "Work done during an internship at Naver Labs",
+  "face_blur_required": true,
+  "paper_url": null,
+  "code_url": "https://github.com/eeyore22/RoDAS",
+  "page_repository_url": "https://github.com/eeyore22/RoDAS-project",
+  "expected_page_url": "https://eeyore22.github.io/RoDAS-project/",
+  "citation_year": 2026,
+  "citation_note": "Manuscript in preparation",
+  "layout_reference": "https://social-nav.github.io/LISN-project/",
+  "local_only": true
+}

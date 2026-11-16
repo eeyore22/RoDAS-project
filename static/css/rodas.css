@@ -1,0 +1,65 @@
+/* Small additions to the retained LISN template. */
+.project-name { font-weight: 700; letter-spacing: .06em; color: var(--text-secondary); margin-bottom: 1rem; }
+.publication-title { overflow-wrap: break-word; }
+.publication-authors .author-block { margin-right: 0; }
+.publication-links .icon svg { width: 1.1em; height: 1.1em; }
+.unavailable { opacity: .5; cursor: default; pointer-events: none; }
+.teaser-image { margin-bottom: 1.5rem; }
+.teaser-image img { display: block; width: 100%; height: auto; }
+.schema-figure img, .method-figure img { display: block; width: 100%; height: auto; }
+figcaption:not(.subtitle), .figure-note, .fixed-record { font-size: .875rem; color: var(--text-secondary); line-height: 1.6; }
+.schema-figure figcaption, .method-figure figcaption { text-align: center; margin-top: .8rem; }
+.section-lead { margin: -1rem auto 1.5rem; color: var(--text-secondary); }
+.comparison-images { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; align-items: center; }
+.comparison-images img { min-width: 0; }
+.results-carousel .item figure { margin: 0; }
+.results-carousel .item { font-size: 1rem; }
+.results-carousel .item .subtitle { line-height: 1.65; }
+.results-carousel:not(.is-initialized) > .item { margin-bottom: 1.5rem; }
+.table-container { max-width: 100%; }
+.table { background: transparent; }
+.results-table caption { caption-side: bottom; text-align: left; font-size: .85rem; color: var(--text-secondary); padding-top: .7rem; }
+.results-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.results-table thead th:not(:first-child) { text-align: right; }
+.backbone-table { min-width: 640px; }
+.backbone-table thead th[colspan] { text-align: center; }
+.corpus-table caption { caption-side: bottom; text-align: left; font-size: .85rem; color: var(--text-secondary); padding-top: .7rem; }
+.corpus-table th { width: 48%; }
+.schema-details { margin: 1.25rem 0; }
+.schema-details .table-container { margin-top: 1rem; }
+.schema-table th { width: 25%; }
+.paper-figure { margin: .5rem 0 1.5rem; }
+.paper-figure img { display: block; width: 100%; height: auto; }
+.paper-figure figcaption { text-align: center; margin-top: .75rem; }
+.record-table { font-size: .9rem; margin-top: 1rem; }
+.record-table th { width: 32%; }
+.record-table code { white-space: normal; overflow-wrap: anywhere; }
+.inspection-group { margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+summary { cursor: pointer; font-weight: 500; }
+.inspection-group > .figure-note { margin: 1rem 0; }
+.observation-details { margin: 1.25rem 0; }
+.observation-viewer { margin: 1rem 0 2rem; }
+.observation-frame img { width: 100%; height: auto; display: block; }
+.observation-frame figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .3rem 1rem; margin-top: .5rem; }
+.time-control { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin: 1rem 0 .6rem; font-size: .9rem; }
+.time-control input { flex: 1; min-width: 100px; accent-color: var(--primary-color); }
+.time-control output { width: 4rem; text-align: right; }
+.time-context { font-size: .85rem; color: var(--text-secondary); }
+.time-context.future { color: #8a4b1d; }
+.observation-chart { display: block; width: 100%; height: auto; }
+.skip-link { position: absolute; left: -10000px; top: 1rem; z-index: 1001; background: white; padding: .75rem; }
+.skip-link:focus { left: 1rem; }
+:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 4px; }
+pre code { white-space: pre; }
+@media (max-width: 480px) {
+  .comparison-images { grid-template-columns: 1fr; }
+  .results-carousel .item { margin-inline: 0; }
+  .time-control label { width: 100%; }
+  .publication-links .link-block { display: inline-block; margin-bottom: 0; }
+  .publication-links .button { width: auto; }
+  .record-table th { width: 35%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
